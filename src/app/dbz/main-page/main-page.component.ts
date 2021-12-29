@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Personaje } from '../intarfaces/dbz.interface';
+
+import { DbzService } from '../services/dbz.service';
 
 
 @Component({
@@ -26,6 +28,9 @@ export class MainPageComponent {
 
   agregarNuevoPersonaje( argumento: Personaje ){
     this.personajes.push( argumento );
-    
+  }
+
+  constructor( private DbzService: DbzService ){
+
   }
 }
